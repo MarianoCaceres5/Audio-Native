@@ -1,36 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
-
-import { Audio } from 'expo-av';
 import { useState, useEffect } from 'react';
+import SoundsGalery from './src/SoundsGalery';
+
+//https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3
+//https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba-online-audio-converter.com_-1.wav
 
 export default function App() {
 
-  const [sound, setSound] = useState();
-
-  let playSound = async() => {
-    console.log('Loading Sound');
-    const { sound } = await Audio.Sound.createAsync(require('./assets/audioBocina.mp3')
-    );
-    setSound(sound);
-
-    console.log('Playing Sound');
-    await sound.playAsync();
-  }
-
-  useEffect(() => {
-    return sound
-      ? () => {
-          console.log('Unloading Sound');
-          sound.unloadAsync();
-        }
-      : undefined;
-  }, [sound]);
-
   return (
     <View style={styles.container}>
-      <Button title="Play Sound" onPress={playSound} />
-      <StatusBar style="auto" />
+      <SoundsGalery/>
     </View>
   );
 }

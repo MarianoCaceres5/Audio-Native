@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "expo": "~49.0.13",
+    "expo-av": "~13.4.1",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-native": "0.72.5",
-    "expo-av": "~13.4.1"
+    "react-native-sound-player": "^0.13.2",
+    "react-native-track-player": "^3.2.0-4b859e8de72a0e4c646b000906fe9201dd85b32a"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
