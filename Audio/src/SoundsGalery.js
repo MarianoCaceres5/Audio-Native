@@ -11,8 +11,6 @@ import {
 } from "react-native";
 import Sound from "./Sound";
 import { useState, useEffect } from "react";
-import sonidoBocina from "../assets/audioBocina.mp3";
-import { Audio } from "expo-av";
 
 //https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3
 //https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba-online-audio-converter.com_-1.wav
@@ -24,13 +22,13 @@ export default function SoundsGalery() {
     const listaAudios = [
       {
         title: "Sonido Marimba",
-        img: require('../assets/marimba.jpg'),
+        img: require('../assets/marimba.png'),
         sound: "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3",
         type: "url",
       },
       {
         title: "Sonido Bocina",
-        img: require('../assets/bocina.jpg'),
+        img: require('../assets/bocina.png'),
         sound: require("../assets/audioBocina.mp3"),
         type: "media",
       },
