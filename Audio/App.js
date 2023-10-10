@@ -10,10 +10,7 @@ import SoundsGalery from './src/SoundsGalery';
 export default function App() {
 
   return (
-    <View style={styles.container}>
-      <SoundsGalery/>
-      
-    </View>
+      <SoundsGalery/>     
   );
 }
 
