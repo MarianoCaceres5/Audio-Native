@@ -31,11 +31,19 @@ export default function Sound({audioObject}) {
             : undefined;
     }, [sound]);
 
+
+
+    
     return (
+
+
+
+
         // <TouchableOpacity onPress={() => playSound()}>            
         //     
         // </TouchableOpacity>
         <>
+       
             <Text>{audioObject.title}</Text>
             <Button title='Play Sound' onPress={playSound}></Button>
         </>
@@ -49,4 +57,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    item: {
+        padding: 20,
+        marginVertical: 8,
+        marginHorizontal: 16,
+      },
+      title: {
+        fontSize: 32,
+      }
 });
